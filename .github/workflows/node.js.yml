@@ -19,7 +19,7 @@ jobs:
       - run: npm ci    
       - run: cd kamradekho
       - run: npm ci
-      - run: npm run
+      - run: npm run test --if-present
       - run: cd ..
       # - run: node server.js
       - run: pm2 stop 0
