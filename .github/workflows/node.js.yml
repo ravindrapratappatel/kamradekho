@@ -19,12 +19,8 @@ jobs:
       - run: npm ci    
       - run: cd kamradekho
       - run: npm ci
-
-      - name: build
-        run: npm run build 
-        env:
-          CI: false
-
+      - run: npm run build --if-present
+      - run: npm test
       - run: cd ..
       # - run: node server.js
       - run: pm2 stop 0
