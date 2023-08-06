@@ -23,8 +23,8 @@ const dbconfig = require("./config/db.config");
 const Role = db.role;
 const url = "mongodb+srv://ravi:ravi1234@cluster1.sl185.mongodb.net/kamradekho?retryWrites=true&w=majority";
 db.mongoose
-  //.connect(url, {
-.connect(`mongodb://${dbconfig.HOST}:${dbconfig.PORT}/${dbconfig.DB}`, {
+  .connect(url, {
+//.connect(`mongodb://${dbconfig.HOST}:${dbconfig.PORT}/${dbconfig.DB}`, {
    useNewUrlParser: true,
    useUnifiedTopology: true
   })
@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
   res.json({ message: "server is Running" });
 });
 // set port, listen for requests
-// const PORT = process.env.PORT || 8080;
+// const PORT = process.env.PORT || 5000;
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
