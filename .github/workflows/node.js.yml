@@ -19,9 +19,9 @@ jobs:
       - run: npm i    
       - run: cd kamradekho
       - run: npm i
-      # - run: npm run build
+      - run: npm run build
       - run: cd ..
-      - run: node server.js
+      # - run: node server.js
       - run: pm2 stop 0
       - run: pm2 start 0
       - run: pm2 save
